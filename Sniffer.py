@@ -37,10 +37,10 @@ while True:
         longitud = str(data[26:27] + str(data[28:30]) + "." + str(data[30:35]))
         print("Latitud: {}  Longitud: {}   Fecha: {} ".format(latitud, longitud, sem1))
         # BD Connection
-        if latitud.find("-") != 0:
+        if latitud.find("-") != -1:
             print("error no se puede mandar a la base de datos")
-            print(latitud.find("-"))
-        if latitud.find("-") == 0:
+            
+        if latitud.find("-") == -1:
             connection = pymysql.connect(host="diseno.cxmeswdphwpd.us-east-1.rds.amazonaws.com", user="dherreraj", passwd="9805jama",
                                      db="diseno")
             MyCursor = connection.cursor()
