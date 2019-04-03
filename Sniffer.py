@@ -39,6 +39,7 @@ while True:
         # BD Connection
         if latitud.find("-") != 0:
             print("error no se puede mandar a la base de datos")
+            print(latitud.find("-"))
         if latitud.find("-") == 0:
             connection = pymysql.connect(host="diseno.cxmeswdphwpd.us-east-1.rds.amazonaws.com", user="dherreraj", passwd="9805jama",
                                      db="diseno")
