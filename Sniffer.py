@@ -38,7 +38,7 @@ while True:
         print("Latitud: {}  Longitud: {}   Fecha: {} ".format(latitud, longitud, sem1))
         # BD Connection
         if latitud.find("-") != -1:
-            if longitud.find("-") == -1 or or longitud.find(";") == -1:
+            if longitud.find("-") == -1 or longitud.find(";") == -1:
                 print("error no se puede mandar a la base de datos")
             
         if latitud.find("-") == -1:
